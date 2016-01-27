@@ -1,0 +1,172 @@
+Shoots Official
+---------------
+
+We manage the code for our site on GitHub, and you'll need a GitHub account to work with it.
+
+With your local terminal, you clone a copy of the site's code, and then you'll fork it by creating a new branch.
+
+Code contributions can be made in the form of code pull requests.
+
+Once reviewed, further changes may be necessary. If it's ready to go live, the pull request is approved and your branch is merged into the master branch.
+
+And that's how your changes go live!
+
+Since our site uses `Jekyll` to manage its content, this git workflow is also how your posts go live. Cool!
+
+Questions are welcome! Ping @jasonhargrove or jason@shootsofficial.com :)
+
+```These docs are written for Mac users but should translate to Windows users with Google searches easily.```
+
+Git + GitHub
+---------------
+
+We're pretty techy at Shoots, so you'll need to use Terminal to work with the site and blog.
+
+1. Create an account at [GitHub](https://github.com)
+2. If you're on Mac, open ```Terminal``` or ```iTerm```. One shortcut is to press `command+space` and type in ```Terminal``` into Spotlight Search. You will use terminal to setup and work with Git.
+3. Setup Git (download and install git, and [configure it for your user name and email as shown in these docs](https://help.github.com/articles/set-up-git)) ```https://help.github.com/articles/set-up-git/```
+4. Øptionally read [these GitHub docs](https://help.github.com/articles/fork-a-repo/) that are informative on what we're doing here now. ```https://help.github.com/articles/fork-a-repo```
+5. Navigate to the [ShootsOfficial.com repo on GitHub](https://github.com/shootsofficial/shootsofficial.github.io) ```https://github.com/shootsofficial/shootsofficial.github.io```
+
+```Heads-up: It's a good idea to secure your GitHub account using SSH Keys, and Two-factor Authentication. That's optional since our codebase is public, but recommended!```
+
+Fork the Website Repo
+---------------
+
+The next step is to fork the Shoots repo using the GitHub website.
+
+1. Navigate to the [shootsofficial/shootsofficial.github.io](https://github.com/shootsofficial/shootsofficial.github.io) repository.
+2. In the top-right corners of the page, click *Fork*.
+
+Now we'll use your GitHub credentials to clone your fork to your local computer for editing.
+
+In terminal, let's navigate to your documents folder.
+
+At the terminal prompt, type this in, and press _enter_:
+
+```
+cd ~/documents
+```
+
+Let's take a look at this directory. Enter this:
+
+```
+ls
+```
+You will see some familiar-looking documents. We are going to download the Shoots site to this directory. You are welcome to use any directory you prefer!
+
+Here is the address of the repo we will now clone:
+
+```
+https://github.com/{your github user name}/shootsofficial.github.io.git
+```
+
+If you are using SSH keys with GitHub (see security comments above), you can clone the site via SSH.
+
+Here we will use the HTTP method. One drawback is that you may need your GitHub username and password. You may see prompts in Terminal, so keep your login info handy!
+
+In your documents directory on Terminal, enter this:
+
+```
+git clone https://github.com/shootsofficial/shootsofficial.github.io.git
+```
+When the download begins, you'll see some information in your terminal. When it's finished, type this:
+
+```
+ls
+```
+
+In the resulting list, you should see ```shootsofficial.github.io```. Let's navigate there:
+
+```
+cd shootsofficial.github.io
+```
+
+And take a look:
+
+```
+CNAME
+_config.yml
+_include
+etc
+```
+You should see these and more. If you have Jekyll install in your Terminal, you can go ahead and run this to see the website served locally:
+
+```
+jekyll serve
+```
+
+If you don't have jekyll yet, we'll sort you out soon. But first, let's create a new branch so that you can be prepared for proposing code changes.
+
+Create a New Branch
+---------------
+
+By default you will be on the `Master` branch in Git after cloning the code.
+
+Check it out:
+
+```
+git status
+```
+
+You should see some stuff about the master branch. Let's switch to a new branch.
+
+Name the new branch anything you like. I'll use a plain example here.
+
+Try this:
+
+```
+git checkout -b my-awesome-branch
+```
+
+Check it:
+
+```
+git status
+```
+
+You are now on branch `my-awesome-branch` (or whatever you named it).
+
+Congrats! You're ready to contribute changes :)
+
+Code Editor
+---------------
+
+You can use terminal editors for changing code, but you're better off using a desktop app for that.
+
+Two examples are:
+
+1. (Sublime Text 3)[http://www.sublimetext.com/3] (infinitely free with occassional nag)
+2. (Brackets)[http://brackets.io] (Pretty good free editor. Slower than Sublime.)
+
+If you're keen, just go ahead and pay the $99 for Sublime. If you don't care, just keep hitting that `escape key` when it bugs you.
+
+These docs won't go into setting up projects in these apps, but don't be daunted! It ain't no thang, and Google will help!
+
+Make a Change
+---------------
+
+```These docs are written first for the Shoots team for contributing to the site content and blog. Design and presentation changes will all use the same git flow, but will not be addressed here today.```
+
+Let's make a small change to a blog post, and then take a look at what Git has to say.
+
+1. In your code editor, open this file `/_posts/2016-01-26-montreal-fashion-week.markdown`
+2. Scroll to the very bottom of the file, after all of the code, and click your mouse to position the cursor at the end.
+3. Press `enter` to add a new line.
+3. Save the document!
+
+That's it. We've made our first change. Let's switch to the Terminal and see what's up with Git.
+
+```
+git status
+```
+
+You should see some stuff about the modified blog file.
+
+Let's just go ahead and commit that change:
+
+```
+git commit -am "I'm making my first code change"
+```
+
+After you hit enter, you will see some confirmation text.
