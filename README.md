@@ -105,8 +105,8 @@ You can use terminal editors for changing code, but you're better off using a de
 
 Two examples are:
 
-1. (Sublime Text 3)[http://www.sublimetext.com/3] (infinitely free with occassional nag)
-2. (Brackets)[http://brackets.io] (Pretty good free editor. Slower than Sublime.)
+1. [Sublime Text 3](http://www.sublimetext.com/3) (infinitely free with occassional nag)
+2. [Brackets](http://brackets.io) (Pretty good free editor. Slower than Sublime.)
 
 If you're keen, just go ahead and pay the $99 for Sublime. If you don't care, just keep hitting that `escape key` when it bugs you.
 
@@ -197,6 +197,30 @@ The area blocked out at the top of the file determines your post's settings.
 The following area is the content. The content can be written using ```HTML```, and more simply using ```markdown```.
 
 Here's [some help with markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)!
+
+Once you make your changes, you'll need to add your new file to Git.
+
+Do this:
+
+```
+git add --a
+```
+
+Now commit your code:
+
+```
+git commit -am 'Added a blog post about fashion photography!'
+```
+
+And then push it up to your fork repo:
+
+```
+git push
+```
+
+Now go to the fork on the GitHub website and ```open a pull request```.
+
+And you're set :)
 
 Good luck!
 
