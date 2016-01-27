@@ -158,7 +158,7 @@ Make a Pull Request
 Back in your web browser, navigate to your fork of the Shoots repo in your GitHub account:
 
 ```
-https://github.com/{your github user name}/shootsofficial.github.io.git
+https://github.com/{your github user name}/shootsofficial.github.io
 ```
 
 You should see a green button that says: ```New pull request```.
