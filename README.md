@@ -96,38 +96,7 @@ You should see these and more. If you have Jekyll install in your Terminal, you 
 jekyll serve
 ```
 
-If you don't have jekyll yet, we'll sort you out soon. But first, let's create a new branch so that you can be prepared for proposing code changes.
-
-Create a New Branch
----------------
-
-By default you will be on the `Master` branch in Git after cloning the code.
-
-Check it out:
-
-```
-git status
-```
-
-You should see some stuff about the master branch. Let's switch to a new branch.
-
-Name the new branch anything you like. I'll use a plain example here.
-
-Try this:
-
-```
-git checkout -b my-awesome-branch
-```
-
-Check it:
-
-```
-git status
-```
-
-You are now on branch `my-awesome-branch` (or whatever you named it).
-
-Congrats! You're ready to contribute changes :)
+If you don't have jekyll yet, we'll sort you out soon. But first it's a good idea to decide how you will edit the code. Let's open up a code editor!
 
 Code Editor
 ---------------
@@ -170,3 +139,65 @@ git commit -am "I'm making my first code change"
 ```
 
 After you hit enter, you will see some confirmation text.
+
+Now you're ready to push your changes up to GitHub, into your fork of the Shoots repo.
+
+Enter this:
+
+```
+git push
+```
+
+You'll see some stuff about writing objects. Now your code is at GitHub!
+
+We can now issue a ```pull request``` to propose merging these code changes back into the Shoots repository. If your changes are accepted and merged, your work will go live!!
+
+Make a Pull Request
+---------------
+
+Back in your web browser, navigate to your fork of the Shoots repo in your GitHub account:
+
+```
+https://github.com/{your github user name}/shootsofficial.github.io.git
+```
+
+You should see a green button that says: ```New pull request```.
+
+Click that!
+
+Most likely the GitHub site will select the correct options by default.
+
+You are proposing to merge your `head fork` `master` branch, into the `base fork` `master` branch.
+
+The `base fork` is the Shoots repo. The `head fork` is your own fork of that repo.
+
+If all is well, you should see some green (or red) changes in the code. In this example you may see an extra line you added at the bottom of a blog post. If you made other changes, you'd see that stuff here too.
+
+The cool thing about this work flow is that you never have to stress too much about changing code.
+
+Git and GitHub keeps track of every change, and sets it up so that mistakes in merging code can be easily fixed.
+
+If you want to open the pull request, hit the big green button that says so.
+
+(If you want to cancel, just do nothing and close the page.)
+
+Making Blog Posts
+---------------
+
+In future commits I'll expand on this README. In the meantime, I'll point you in the right direction!
+
+To make blog posts just navigate to ```_posts``` in the main directory.
+
+Duplicate one of the other posts and rename the file to match today's date, and a title for the post.
+
+Open up that file in your code editor and make changes.
+
+The area blocked out at the top of the file determines your post's settings.
+
+The following area is the content. The content can be written using ```HTML```, and more simply using ```markdown```.
+
+Here's [some help with markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)!
+
+Good luck!
+
++
