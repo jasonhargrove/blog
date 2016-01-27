@@ -105,8 +105,8 @@ You can use terminal editors for changing code, but you're better off using a de
 
 Two examples are:
 
-1. (Sublime Text 3)[http://www.sublimetext.com/3] (infinitely free with occassional nag)
-2. (Brackets)[http://brackets.io] (Pretty good free editor. Slower than Sublime.)
+1. [Sublime Text 3](http://www.sublimetext.com/3) (infinitely free with occassional nag)
+2. [Brackets](http://brackets.io) (Pretty good free editor. Slower than Sublime.)
 
 If you're keen, just go ahead and pay the $99 for Sublime. If you don't care, just keep hitting that `escape key` when it bugs you.
 
