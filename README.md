@@ -198,6 +198,30 @@ The following area is the content. The content can be written using ```HTML```, 
 
 Here's [some help with markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)!
 
+Once you make your changes, you'll need to add your new file to Git.
+
+Do this:
+
+```
+git add --a
+```
+
+Now commit your code:
+
+```
+git commit -am 'Added a blog post about fashion photography!'
+```
+
+And then push it up to your fork repo:
+
+```
+git push
+```
+
+Now go to the fork on the GitHub website and ```open a pull request```.
+
+And you're set :)
+
 Good luck!
 
 +
