@@ -3,11 +3,11 @@ Shoots Official
 
 We manage the code for our site on GitHub, and you'll need a GitHub account to work with it.
 
-With your local terminal, you clone a copy of the site's code, and then you'll fork it by creating a new branch.
+You'll start by forking the Shoots repo, making changes in a code editor, and commiting your changes via Git in your terminal.
 
-Code contributions can be made in the form of code pull requests.
+Code contributions can be merged via pull requests.
 
-Once reviewed, further changes may be necessary. If it's ready to go live, the pull request is approved and your branch is merged into the master branch.
+Once reviewed, further changes may be necessary. If it's ready to go live, the pull request is approved and your code is merged into the master branch.
 
 And that's how your changes go live!
 
