@@ -3,11 +3,19 @@ layout: post
 title:  "We love this"
 date:   2016-01-26 10:23:51 -0500
 categories: runway fashion photo montreal canada
+excerpt: 'Danika K wearing a knit pullover in grey and floral trousers from Topshop. Image by Jason Hargrove'
+author: 'Jason Hargrove'
+authorTwitter: '@jasonhargrove'
+shareImage: 'http://shootsofficial.com/assets/images/shoots-official-danika-floral-craft.jpg'
 ---
 
 <a href="/runway/fashion/photo/montreal/canada/2016/01/26/shoots-danika-floral-craft-jh+.html">
-	<img src="/assets/images/shoots-official-danika-floral-craft.png">
+	<img src="{{ page.shareImage }}">
 </a>
+
+<div class="description">
+	<p>{{ page.excerpt }}</p>
+</div>
 
 <!--more-->
 
