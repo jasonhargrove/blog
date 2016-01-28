@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Statement"
+title:  "Statements"
 date:   2016-01-27 11:23:51 -0500
-categories: tweet twitter music
+categories: tweet twitter makeup statement eyes
 author: "Jason Hargrove"
 authorTwitter: "@jasonhargrove"
 shareDescription: "Statement makeup for the eyes ✨✨"
