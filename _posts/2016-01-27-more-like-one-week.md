@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "More Like a Week and a half!"
+title:  "More like a week and a half!"
 date:   2016-01-27 11:57:51 -0500
 categories: tweet shoot fashion countdown 
 author: "Maria Rubio"
