@@ -2,6 +2,9 @@
 layout: page
 title: About Us 
 permalink: /about/
+excerpt: 'Frequently asked questions by the Shoots Official, a private, non-commercial creative production studio focused on fashion photography and film.'
+author: 'Alanna Joanne | Jason Hargrove'
+authorTwitter: '@shootsofficial'
 ---
 
 > Who is Shoots?
@@ -122,5 +125,3 @@ One of our core values is collaboration and we love connecting with like-minded 
 <br>
 
 All questions are welcome. Say <mailto:hello@shootsofficial.com> :)
-
-
