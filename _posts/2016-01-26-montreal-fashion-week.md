@@ -10,7 +10,7 @@ shareImage: 'http://shootsofficial.com/assets/images/duy-montreal-fashion-week-j
 
 <p>Test driving our new site's editing tools, doing my best to share this throwback runway photo; during a really nice time Jason had in old Montreal.</p>
 
-<p>&mdash; AJ</p> 
+<p>&mdash; AJ</p>
 
 <a href="/runway/fashion/photo/montreal/canada/2016/01/26/montreal-fashion-week.html">
 	<img src="{{ page.shareImage }}">
