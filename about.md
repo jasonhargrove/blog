@@ -49,7 +49,7 @@ Shoots is funded by Jason Hargrove.
 
 > How long has Shoots been shooting? 
 
-Shoots has been shooting since September 2015. Our Photographer Jason Hargrove has been actively shooting since 2006 and since 2011 has been focused in fashion
+Shoots has been shooting since September 2015. Our Photographer Jason Hargrove has been actively shooting since 2006 and since 2011 has been focused in fashion.
 
 <br>
 
@@ -63,11 +63,13 @@ Shoots exists to produce great fashion creative, for the sake of that alone. How
 
 > Who are the creatives on your team?
 
-**Jason Hargrove** is our Creative Director and Photographer.
+Jason Hargrove is our Creative Director and Photographer. He writes for us too. 
 
-**Julia Crimson** is our Hair & Makeup Artist.	
+Julia Crimson is our Hair & Makeup Artist.	
 
-**Alanna Joanne** is one of our Writers.	
+Alanna Joanne (Producer) is one of our Writers.
+
+Maria Rubio (Assistant Producer) also contributes as a model. 
 
 <br>
 
@@ -119,6 +121,6 @@ One of our core values is collaboration and we love connecting with like-minded 
 <br>
 <br>
 
-Still have questions? Send us an email to <mailto:hello@shootsofficial.com>!
+All questions are welcome. Say <mailto:hello@shootsofficial.com> :)
 
 
