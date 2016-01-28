@@ -3,4 +3,4 @@ _site
 .jekyll-metadata
 .DS_Store
 _drafts_private
-draft*
+*draft-private*
