@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hey dudes, Check out our little but extraordinarily dynamic fashion website. Maria, Jason, and I (Alanna) say hi!"
-date:   2016-01-26 10:23:51 -0500
+date:   2016-01-26 8:23:51 -0500
 categories: runway fashion photo montreal canada
 author: 'Alanna Joanne'
 authorTwitter: '@alannajoanne11'
