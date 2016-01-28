@@ -3,6 +3,9 @@ layout: post
 title:  "Hey dudes, Check out our little but extraordinarily dynamic fashion website. Maria, Jason, and I (Alanna) say hi!"
 date:   2016-01-26 10:23:51 -0500
 categories: runway fashion photo montreal canada
+author: 'Alanna Joanne'
+authorTwitter: '@alannajoanne11'
+shareImage: 'http://shootsofficial.com/assets/images/duy-montreal-fashion-week-jasonhargrove.jpg'
 ---
 
 <p>Test driving our new site's editing tools, doing my best to share this throwback runway photo; during a really nice time Jason had in old Montreal.</p>
@@ -10,7 +13,7 @@ categories: runway fashion photo montreal canada
 <p>&mdash; AJ</p>
 
 <a href="/runway/fashion/photo/montreal/canada/2016/01/26/montreal-fashion-week.html">
-	<img src="/assets/images/duy-montreal-fashion-week-jasonhargrove.jpg">
+	<img src="{{ page.shareImage }}">
 </a>
 
 <!--more-->

@@ -10,7 +10,7 @@ shareImage: 'http://shootsofficial.com/assets/images/shoots-official-danika-flor
 ---
 
 <a href="/runway/fashion/photo/montreal/canada/2016/01/26/shoots-danika-floral-craft-jh+.html">
-	<img src="/assets/images/shoots-official-danika-floral-craft.jpg">
+	<img src="{{ page.shareImage }}">
 </a>
 
 <div class="description">
