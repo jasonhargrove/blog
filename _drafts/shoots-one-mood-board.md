@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Shoot 1.1 Mood Board
-date: 2016-01-28
+date: 2016-01-28 3:02:33 -0500
 categories: fashion photoshoot toronto moodboard shoots inspiration 
 shareDescription: 'Inspired by urban florals and loud pops of colours and feeling excited for the first shoot of Season 2! - AJ'
 author: 'Alanna Joanne'
