@@ -40,3 +40,6 @@ shareImage: "http://shootsofficial.com/assets/images/shoots-official-danika-flor
 <div id="flickr_badge_wrapper">
 	<script type="text/javascript" src="http://www.flickr.com/badge_code.gne?count=25&display=random&size=square&nsid=134797126@N06&raw=1"></script>
 </div>
+
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Last night filled my empty site with Jekyll. I like it, I like it 🤓 Happy Tuesday, Twitter!&#10;&#10;<a href="https://t.co/SQlvjFGpyr">https://t.co/SQlvjFGpyr</a> <a href="https://t.co/9bNopfdEoR">pic.twitter.com/9bNopfdEoR</a></p>&mdash; JAS0N (@jasonhargrove) <a href="https://twitter.com/jasonhargrove/status/692037019908902913">January 26, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
