@@ -12,8 +12,6 @@ shareImage: 'http://shootsofficial.com/assets/images/shoots-mood-board-floral-co
 Inspired by urban florals and loud pops of colours and feeling excited for the first shoot of Season 2!
 
 
-<br>
-
 ![Image of Mood Board]({{ page.shareImage }})
 
 <!--more-->
