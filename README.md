@@ -453,5 +453,3 @@ Once your code changes are approved do this:
 ```
 gulp deploy:production
 ```
-
-
