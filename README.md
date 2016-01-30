@@ -451,5 +451,12 @@ Note that we still need to do Pull Requests and have team review, but once merge
 Once your code changes are approved do this:
 
 ```
+gulp build
+```
+Once that is ready, go ahead and deploy.
+
+```
 gulp deploy:production
 ```
+
+
