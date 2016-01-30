@@ -12,6 +12,12 @@ var shell = require('gulp-shell');
 var browserSync = require('browser-sync');
 var deploy = require('gulp-gh-pages');
 var cssnano = require('gulp-cssnano');
+var privateConfig = require('./_private/config');
+
+// Using a kraken fork
+// My changes are upstream in a pull request
+var kraken = require('./lib/gulp-kraken');
+// var kraken = require('gulp-kraken');
 
 // Empty the _site directory
 gulp.task('clean', function () {
@@ -22,7 +28,8 @@ gulp.task('clean', function () {
 gulp.task('lint', function () {
   return gulp.src(['**/*.js',
       '!node_modules/**',
-      '!_site/**'
+      '!_site/**',
+      '!lib/**'
     ])
     .pipe(eslint())
     .pipe(eslint.format())
@@ -30,7 +37,7 @@ gulp.task('lint', function () {
 });
 
 // Deploy to production
-gulp.task('deploy:production', ['build'], function() {
+gulp.task('deploy:production', function() {
   return gulp.src('./_site/**/*')
     .pipe(deploy({
       remoteUrl: 'https://github.com/shootsofficial/shootsofficial.github.io',
@@ -81,8 +88,20 @@ gulp.task('cssnano', ['jekyll build'], function() {
       .pipe(gulp.dest('_site/assets/css'));
 });
 
+// Images
+gulp.task('kraken', ['jekyll build'], function () {
+  if (!privateConfig.kraken) {
+    console.log('--- Missing Kraken Config');
+    console.log('--- Contact @jasonhargrove');
+    return;
+  }
+
+  gulp.src('_site/assets/images/**/*.*')
+    .pipe(kraken(privateConfig.kraken));
+});
+
 // Build jekyll site
-gulp.task('build', ['jekyll build', 'minify', 'uglify', 'cssnano']);
+gulp.task('build', ['jekyll build', 'minify', 'uglify', 'cssnano', 'kraken']);
 
 // Shortcut
 gulp.task('default', ['build']);
