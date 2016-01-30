@@ -83,7 +83,7 @@ gulp.task('uglify', ['jekyll build'], function() {
 });
 
 // Build jekyll site
-gulp.task('build', ['jekyll build', 'gitignore', 'minify', 'uglify']);
+gulp.task('build', ['jekyll build', 'minify', 'uglify']);
 
 // Shortcut
 gulp.task('default', ['build']);
