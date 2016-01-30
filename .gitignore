@@ -4,3 +4,4 @@ _site
 .DS_Store
 _drafts_private
 *draft-private*
+node_modules
