@@ -18,9 +18,10 @@ function onReady (cb) {
   if (document.readyState === 'complete') {
     return cb();
   }
+
   document.addEventListener('DOMContentLoaded', cb, false);
 };
 
-onReady(function() {
+onReady(function () {
   var app = start();
 });

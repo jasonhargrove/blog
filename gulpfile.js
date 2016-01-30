@@ -10,6 +10,7 @@ var eslint = eslint = require('gulp-eslint');
 var uglify = require('gulp-uglify');
 var shell = require('gulp-shell');
 var browserSync = require('browser-sync');
+var deploy = require('gulp-gh-pages');
 
 // Empty the _site directory
 gulp.task('clean', function () {
@@ -18,10 +19,22 @@ gulp.task('clean', function () {
 
 // Lint the JS
 gulp.task('lint', function () {
-  return gulp.src(['**/*.js', '!node_modules/**', '!_site/node_modules/**'])
-      .pipe(eslint())
-      .pipe(eslint.format())
-      .pipe(eslint.failAfterError());
+  return gulp.src(['**/*.js',
+      '!node_modules/**',
+      '!_site/**'
+    ])
+    .pipe(eslint())
+    .pipe(eslint.format())
+    .pipe(eslint.failAfterError());
+});
+
+// Deploy to production
+gulp.task('deploy:production', function() {
+  return gulp.src('./_site/**/*')
+    .pipe(deploy({
+      remoteUrl: 'https://github.com/shootsofficial/shootsofficial.github.io',
+      branch: 'master'
+    }));
 });
 
 // Build _site directory
@@ -43,6 +56,13 @@ gulp.task('serve:production', ['build'], function() {
   });
 });
 
+// Copy .gitignore to _site
+gulp.task('gitignore', ['jekyll build'], function () {
+  return gulp
+    .src('./.gitignore')
+    .pipe(gulp.dest('_site'));
+});
+
 // HTML
 gulp.task('minify', ['jekyll build'], function() {
   return gulp.src([
@@ -60,7 +80,7 @@ gulp.task('uglify', ['jekyll build'], function() {
 });
 
 // Build jekyll site
-gulp.task('build', ['jekyll build', 'minify','uglify']);
+gulp.task('build', ['jekyll build', 'gitignore', 'minify', 'uglify']);
 
 // Shortcut
 gulp.task('default', ['build']);

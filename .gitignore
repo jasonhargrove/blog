@@ -5,3 +5,4 @@ _site
 _drafts_private
 *draft-private*
 node_modules
+.publish
