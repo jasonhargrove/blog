@@ -6,3 +6,4 @@ _drafts_private
 *draft-private*
 node_modules
 .publish
+_private
