@@ -56,12 +56,15 @@ gulp.task('serve:production', ['build'], function() {
   });
 });
 
-// Copy .gitignore to _site
-gulp.task('gitignore', ['jekyll build'], function () {
-  return gulp
-    .src('./.gitignore')
-    .pipe(gulp.dest('_site'));
-});
+// Copy .gitignore for deployment
+// // Deployment module ignores .gitignore
+// // Resolved the problem by having Jekyll ignore node_modules
+// gulp.task('gitignore', ['jekyll build'], function () {
+//   return gulp
+//     .src('./.gitignore')
+//     .pipe(gulp.dest('_site'))
+//     .pipe(gulp.dest('.publish'));
+// });
 
 // HTML
 gulp.task('minify', ['jekyll build'], function() {

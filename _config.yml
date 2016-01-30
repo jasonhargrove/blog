@@ -19,3 +19,5 @@ github_username:  shootsofficial
 markdown: kramdown
 
 excerpt_separator: <!--more-->
+
+exclude: ['node_modules']
