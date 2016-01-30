@@ -96,6 +96,9 @@ gulp.task('kraken', ['jekyll build'], function () {
     return;
   }
 
+  // Temporarily disable Kraken
+  return;
+
   gulp.src('_site/assets/images/**/*.*')
     .pipe(kraken(privateConfig.kraken));
 });

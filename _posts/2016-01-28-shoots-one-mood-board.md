@@ -34,3 +34,5 @@ Inspired by urban florals and loud pops of colours, I made this mood board image
 <div id="flickr_badge_wrapper">
 	<script type="text/javascript" src="http://www.flickr.com/badge_code.gne?count=25&display=random&size=square&nsid=134797126@N06&raw=1"></script>
 </div>
+
+.
