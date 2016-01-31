@@ -134,7 +134,7 @@ gulp.task('kraken', ['jekyll build'], function () {
 // // http://shootsofficial.com/shootsofficial.assets
 // Usage example:
 // http://shootsofficial.com/shootsofficial.assets/images/duy-montreal-fashion-week-jasonhargrove.jpg
-gulp.task('deploy:assets', ['kraken'], function() {
+gulp.task('deploy:assets', ['kraken'], function () {
   return gulp.src('./_site/assets/**/*')
     .pipe(deploy({
       remoteUrl: 'https://github.com/shootsofficial/shootsofficial.assets',
