@@ -45,6 +45,22 @@ gulp.task('deploy:production', function() {
     }));
 });
 
+// Deploy Production Assets
+// This will deploy to a project site
+// branched off our main site.
+// We'll use this for serving assets (it's free!)
+// and this will allow us to use Kraken
+// a few times per week (on demand)
+// rather than every time we build the production _site
+// (reducing our Kraken costs)
+gulp.task('deploy:assets', function() {
+  return gulp.src('./_site/assets/**/*')
+    .pipe(deploy({
+      remoteUrl: 'https://github.com/shootsofficial/shootsofficial.assets',
+      branch: 'gh-pages'
+    }));
+});
+
 // Build _site directory
 // Copy, process SASS, etc
 gulp.task('jekyll build', ['clean'], shell.task([

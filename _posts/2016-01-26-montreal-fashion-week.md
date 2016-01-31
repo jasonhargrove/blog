@@ -5,7 +5,7 @@ date:   2016-01-26 8:23:51 -0500
 categories: runway fashion photo montreal canada
 author: 'Alanna Joanne'
 authorTwitter: '@alannajoanne11'
-shareImage: 'http://shootsofficial.com/assets/images/duy-montreal-fashion-week-jasonhargrove.jpg'
+shareImage: 'http://shootsofficial.com/shootsofficial.assets/images/duy-montreal-fashion-week-jasonhargrove.jpg'
 ---
 
 <p>Test driving our new site's editing tools, doing my best to share this throwback runway photo; during a really nice time Jason had in old Montreal.</p>
