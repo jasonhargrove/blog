@@ -6,7 +6,7 @@ categories: fashion photoshoot toronto moodboard shoots inspiration floral
 shareDescription: 'Inspired by urban florals and loud pops of colours, I made this mood board image with some of the photos that Jason has shared with the team in presenting his creative direction. So excited about Shoots Season 2! – Alanna'
 author: 'Alanna Joanne'
 authorTwitter: '@alannajoanne11'
-shareImage: 'http://shootsofficial.com/assets/images/shoots-mood-board-floral-colour.jpg'
+shareImage: 'http://shootsofficial.com/shootsofficial.assets/images/shoots-mood-board-floral-colour.jpg'
 ---
 
 Inspired by urban florals and loud pops of colours, I made this mood board image with some of the photos that Jason has shared with the team in presenting his creative direction. So excited about Shoots Season 2! – Alanna
