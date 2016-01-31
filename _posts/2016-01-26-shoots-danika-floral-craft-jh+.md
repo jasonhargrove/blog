@@ -6,7 +6,7 @@ categories: runway fashion photo montreal canada
 author: "Jason Hargrove"
 authorTwitter: "@jasonhargrove"
 shareDescription: "Danika K wearing a knit pullover in grey and floral trousers from Topshop. Image by Jason Hargrove"
-shareImage: "http://shootsofficial.com/assets/images/shoots-official-danika-floral-craft.jpg"
+shareImage: "http://shootsofficial.com/shootsofficial.assets/images/shoots-official-danika-floral-craft.jpg"
 ---
 
 <a href="/runway/fashion/photo/montreal/canada/2016/01/26/shoots-danika-floral-craft-jh+.html">
