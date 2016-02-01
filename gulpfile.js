@@ -115,7 +115,7 @@ gulp.task('minify', ['jekyll build'], function () {
 
 // JavaScript
 gulp.task('uglify', ['jekyll build'], function () {
-  return gulp.src('_site/assets/js/jasonhargrove.js')
+  return gulp.src('_site/assets/js/shoots.js')
     .pipe(uglify())
     .pipe(gulp.dest('_site/assets/js'));
 });
