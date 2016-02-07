@@ -11,7 +11,8 @@ authorTwitter: "@jasonhargrove"
 
 <br>
 
-Model: Stella
-Hair & Makeup: Julia Crimson
-Producers: Alanna Joanne & Maria Rubio
-Style & Photography: Jason Hargrove + 
+Model: Stella  
+Hair & Makeup: Julia Crimson  
+Producers: Alanna Joanne & Maria Rubio  
+Style & Photography: Jason Hargrove +  
+ 
