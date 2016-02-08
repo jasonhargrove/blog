@@ -15,7 +15,7 @@ shareDescription: 'A young girl wears braids and a black and white dress from An
 <!--more-->
 
  Style & Photography: Jason Hargrove +  
- Model: Stella  
+ Model: Stella from Elite Toronto  
  Producers: Alanna Joanne & Maria Rubio  
  Hair & Makeup: Julia Crimson  
  
