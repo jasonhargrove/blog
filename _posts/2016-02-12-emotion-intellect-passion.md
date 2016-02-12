@@ -10,4 +10,4 @@ shareImage: 'http://shootsofficial.com/shootsofficial.assets/images/i-like-peopl
 
 <a href="http://shootsofficial.com/shootsofficial.assets/images/i-like-people-with-depth-quote-yellow-black-text.png">
 	<img src="{{ page.shareImage }}"> 
-	
+</a>
