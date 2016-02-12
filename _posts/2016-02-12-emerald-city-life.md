@@ -6,7 +6,7 @@ categories: fashion photoshoot stella emeraldcity dorothy
 author: 'Shoots Official'
 authorTwitter: '@shootsofficial'
 shareImage: 'http://shootsofficial.com/shootsofficial.assets/images/shoots-emeraldcity-dorothy-jasonhargrove-scotchandsoda.jpeg'
-shareDescription: 'Emerald City Life. Reversible bomber jacket by Scotch & Soda. Denim overall dress from Forever 21. Mosaic blue necklace by Banana Republic.'
+shareDescription: 'Emerald City Life. Reversible bomber jacket by Scotch & Soda. Mosaic blue necklace by Banana Republic.'
 ---
 
 ###Emerald City Life
@@ -21,7 +21,7 @@ Scotch & Soda 🐉 🙌 💚
 
 <!--more-->
 
-Reversible bomber jacket by Scotch & Soda. Denim overall dress by Forever 21. Mosaic blue necklace by Banana Republic.
+Reversible bomber jacket by [Scotch & Soda](https://www.scotch-soda.com/ca/en/home). Mosaic blue necklace by [Banana Republic](http://bananarepublic.gap.com).
 
 Model: Stella from Elite Toronto  
 Style & Photography: Jason Hargrove +    
