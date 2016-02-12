@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "The Wonderful World of Dorothy - Part II"
-date:   2016-02-02 13:23:51 -0500
+date:   2016-02-02 12:15:51 -0500
 categories: fashion photoshoot stella emeraldcity dorothy 
 author: 'Shoots Official'
 authorTwitter: '@shootsofficial'
