@@ -11,7 +11,7 @@ shareDescription: 'Emerald City Life. Reversible bomber jacket by Scotch & Soda.
 
 ###The Wonderful World of Dorothy - Part II
 
-<a href="http://shootsofficial.com/shootsofficial.assets/images/shoots-emeraldcity-dorothy-jasonhargrove-scotchandsoda.jpeg">
+<a href="http://shootsofficial.com/fashion/photoshoot/stella/emeraldcity/dorothy/2016/02/12/emerald-city-life.html">
 	<img src="http://shootsofficial.com/shootsofficial.assets/images/shoots-emeraldcity-dorothy-jasonhargrove-scotchandsoda.jpeg">
 </a> 
 
