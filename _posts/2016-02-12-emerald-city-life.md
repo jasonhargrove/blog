@@ -15,6 +15,10 @@ shareDescription: 'Emerald City Life. Reversible bomber jacket by Scotch & Soda.
 	<img src="http://shootsofficial.com/shootsofficial.assets/images/shoots-emeraldcity-dorothy-jasonhargrove-scotchandsoda.jpeg">
 </a> 
 
+Scotch & Soda 🐉 🙌 💚
+
+[scotch-soda.com](https://scotch-soda.com/ca/en/home)
+
 <!--more-->
 
 Reversible bomber jacket by Scotch & Soda. Denim overall dress by Forever 21. Mosaic blue necklace by Banana Republic.
