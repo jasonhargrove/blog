@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Out in Big Emerald"
-date:   2016-02-16 01:05:31 -0500
+date:   2016-02-16 00:05:31 -0500
 categories: fashion photoshoot stella emeraldcity dorothy 
 author: 'Shoots Official'
 authorTwitter: '@shootsofficial'
