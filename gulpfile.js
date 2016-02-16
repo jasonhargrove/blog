@@ -3,52 +3,43 @@
 // and deploys to two free GitHub Pages servers.
 // The main Jekyll site,
 // and a static assets repo.
-// File optimizations are done with Gulp.
-// A development server provided by Jekyll,
-// and a test production server with BrowserSync.
+// File optimizations are done with Gulp and Kraken.
+// A development server with watchers and BrowserSync.
+// And a test production server too.
 
 // Dependencies
-var gulp = require('gulp');
-var del = require('del');
-var htmlmin = require('gulp-htmlmin');
-var eslint = eslint = require('gulp-eslint');
-var uglify = require('gulp-uglify');
-var shell = require('gulp-shell');
 var browserSync = require('browser-sync').create();
-var deploy = require('gulp-gh-pages');
 var cssnano = require('gulp-cssnano');
+var deploy = require('gulp-gh-pages');
+var del = require('del');
+var eslint = require('gulp-eslint');
+var gulp = require('gulp');
+var htmlmin = require('gulp-htmlmin');
+var htmlreplace = require('gulp-html-replace');
+var shell = require('gulp-shell');
+var uglify = require('gulp-uglify');
+var uglifyInline = require('gulp-uglify-inline');
+var rename = require('gulp-rename');
 var sass = require('gulp-sass');
+var webpack = require('webpack-stream');
 
+// Config
+var htmlminConfig = { collapseWhitespace: true };
 var privateConfig = require('./_private/config');
+var webpackConfig = require('./webpack.config');
 
-// An anti-pattern file for the Shoots site,
-// currently hosting our Kraken secrets.
-// Make this directory:
-// _private
-// And inside it, add this file:
-// config.json
-// Inside that file, add this text,
-// changing the `xxxx` to your Kraken API credentials
-/*
-  {
-    "kraken": {
-      "key": "xxxx",
-      "secret": "xxxx",
-      "lossy": false,
-      "resize": {
-        "width": 1500,
-        "height": 1500,
-        "strategy": "auto"
-      }
-    }
-  }
-*/
-
-// Using a kraken fork that adds their resizing API
-// to the library.
+// Using a kraken fork that
+// adds their resizing API to the library.
 // (My changes are upstream in a pull request.)
 var kraken = require('./lib/gulp-kraken');
 // var kraken = require('gulp-kraken');
+
+// Allow things to break gracefully
+// for example, parse errors in JS builds
+function errorGraceful (error) {
+  console.log(error.toString());
+  this.emit('end');
+}
 
 // Empty the _site directory
 gulp.task('clean', function () {
@@ -60,22 +51,38 @@ gulp.task('lint', function () {
   return gulp.src(['**/*.js',
       '!node_modules/**',
       '!_site/**',
-      '!lib/**'
+      '!lib/**',
+      '!assets/js/analytics.js'
     ])
     .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError());
+    .pipe(eslint.format());
+});
+
+gulp.task('lint:build', ['jekyll build'], function () {
+  return gulp.src(['**/*.js',
+      '!node_modules/**',
+      '!_site/**',
+      '!lib/**',
+      '!assets/js/analytics.js'
+    ])
+    .pipe(eslint())
+    .pipe(eslint.format());
+    // .pipe(eslint.failAfterError());
 });
 
 // Serve _site directory
+// // Disabled the `jekyll` dev server
+// // so that we can use watch to stream sass changes (see next task)
 // gulp.task('serve', shell.task([
 //   'jekyll serve'
 // ]));
 
 // Serve _site directory
-gulp.task('serve', ['jekyll build', 'sass:build'], function () {
+// // Watch for changes
+gulp.task('serve', ['jekyll build', 'sass:build', 'javascript:build'], function () {
   browserSync.init({
-    server: './_site'
+    server: './_site',
+    port: '7777'
   });
 
   gulp.watch([
@@ -86,7 +93,18 @@ gulp.task('serve', ['jekyll build', 'sass:build'], function () {
     'index.html'
   ], ['build']);
 
-  gulp.watch('_sass/*.scss', ['sass']);
+  gulp.watch([
+    'assets/js/**/*.js',
+    'assets/js/**/*.jsx',
+    'assets/js/**/*.scss',
+    'gulpfile.js'
+  ], ['javascript']);
+
+  gulp.watch([
+    '_sass/**/*.scss',
+    'assets/css/**/*.scss',
+    'assets/css/**/*.css'
+  ], ['sass']);
 });
 
 // Serve _site directory, production version
@@ -99,25 +117,18 @@ gulp.task('serve:production', ['build'], function () {
 });
 
 // Build _site directory
-// Copy, process SASS, etc
+// Default `jekyll` is responsible for building the HTML files
 gulp.task('jekyll build', ['clean'], shell.task([
   'jekyll build'
 ]));
 
 // HTML
-gulp.task('minify', ['jekyll build'], function () {
+gulp.task('htmlmin', ['jekyll build'], function () {
   return gulp.src([
-    '_site/**/*.html',
-    '!_site/node_modules/**/*.html'])
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    '_site/*.html',
+    '!_site/node_modules'])
+    .pipe(htmlmin(htmlminConfig))
     .pipe(gulp.dest('_site'));
-});
-
-// JavaScript
-gulp.task('uglify', ['jekyll build'], function () {
-  return gulp.src('_site/assets/js/shoots.js')
-    .pipe(uglify())
-    .pipe(gulp.dest('_site/assets/js'));
 });
 
 // CSS
@@ -136,15 +147,13 @@ gulp.task('kraken', ['jekyll build'], function () {
   }
 
   return gulp.src([
-      '_site/assets/images/**/*.*',
-      '!_site/assets/images/favicon/**/*.*'
-    ])
-    .pipe(kraken(privateConfig.kraken));
+    '_site/assets/images/**/*.*',
+    '!_site/assets/images/favicon/**/*.*'
+  ])
+  .pipe(kraken(privateConfig.kraken));
 });
 
 // SASS
-// // live injection in browser
-// // for example during `gulp serve`
 gulp.task('sass', function () {
   gulp.src('./assets/css/main.scss')
     .pipe(sass().on('error', sass.logError))
@@ -152,12 +161,53 @@ gulp.task('sass', function () {
     .pipe(browserSync.stream());
 });
 
-// // used during `gulp build`
 gulp.task('sass:build', ['jekyll build'], function () {
   gulp.src('./assets/css/main.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./_site/assets/css'))
     .pipe(browserSync.stream());
+});
+
+// Javascript
+gulp.task('javascript', ['lint', 'html'], function () {
+  return gulp.src('./assets/js/app.js')
+    .pipe(webpack(webpackConfig))
+    .on('error', errorGraceful)
+    .pipe(rename('bundle.js'))
+    .pipe(gulp.dest('_site/assets/js'))
+    .pipe(browserSync.reload({ stream: true }));
+});
+
+gulp.task('javascript:build', ['jekyll build', 'lint'], function () {
+  return gulp.src('_site/assets/js/app.js')
+    .pipe(webpack(webpackConfig))
+    .on('error', errorGraceful)
+    .pipe(rename('bundle.js'))
+    .pipe(gulp.dest('_site/assets/js'))
+    .pipe(eslint())
+    .pipe(uglify())
+    .pipe(rename('bundle.min.js'))
+    .pipe(gulp.dest('_site/assets/js'))
+    .pipe(browserSync.reload({ stream: true }));
+});
+
+// HTML
+gulp.task('html', function () {
+  return gulp.src('_site/index.html')
+    .pipe(htmlreplace({
+      javascript: '/assets/js/bundle.js?b=' + new Date().getTime()
+    }))
+    .pipe(gulp.dest('_site'));
+});
+
+gulp.task('html:build', ['jekyll build'], function () {
+  return gulp.src('_site/**/*.html')
+    .pipe(htmlreplace({
+      javascript: '/assets/js/bundle.min.js?b=' + new Date().getTime()
+    }))
+    .pipe(htmlmin(htmlminConfig))
+    .pipe(uglifyInline())
+    .pipe(gulp.dest('_site'));
 });
 
 // Deploy _site/assets/ to production assets server
@@ -173,7 +223,8 @@ gulp.task('sass:build', ['jekyll build'], function () {
 // // http://shootsofficial.com/shootsofficial.assets
 // Usage example:
 // http://shootsofficial.com/shootsofficial.assets/images/duy-montreal-fashion-week-jasonhargrove.jpg
-gulp.task('deploy:assets', ['kraken', 'sass'], function () {
+
+gulp.task('deploy:assets', ['kraken'], function () {
   return gulp.src('./_site/assets/**/*')
     .pipe(deploy({
       remoteUrl: 'https://github.com/shootsofficial/shootsofficial.assets',
@@ -194,11 +245,9 @@ gulp.task('deploy:production', ['build'], function () {
 });
 
 // Build jekyll site
-// Do post-production
-// Refreshes browser if using
-gulp.task('build', ['jekyll build', 'sass:build', 'minify', 'uglify', 'cssnano'],
+gulp.task('build', ['jekyll build', 'sass:build', 'javascript:build', 'cssnano', 'html:build'],
 function () {
-  browserSync.reload()
+  browserSync.reload();
 });
 
 // Shortcut

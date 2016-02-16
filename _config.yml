@@ -19,7 +19,5 @@ contactEmail: hello@shootsofficial.com
 
 # Build settings
 markdown: kramdown
-
 excerpt_separator: <!--more-->
-
-exclude: ['node_modules', 'assets/css/main.scss']
+exclude: ['node_modules', 'assets/css/main.scss', 'gulpfile.js', 'README.md', 'webpack.config.js']

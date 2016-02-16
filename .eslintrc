@@ -1,9 +1,14 @@
 {
-  "env"     : {
-    "browser" : true
+  "ecmaFeatures": {
+    "modules": true,
+    "jsx": true
+  },
+  "env": {
+    "browser": true,
+    "es6": true
   },
   "rules": {
-    "semi" : [2, "always"],
-		"indent" : [2, 2]
+    "semi": [2, "always"],
+    "indent": [2, 2, { "SwitchCase": 1 }]
   }
 }
