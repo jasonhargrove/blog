@@ -25,7 +25,7 @@ shareDescription: 'Out in Big Emerald. Marzena swing dress by Sachin + Babi from
 
 <!--more-->
 
-Marzena swing dress by Sachin + Babi in black and white from [Anthropolgie](http://www.anthropologie.com/anthro/product/clothes-dresses/4130200890203.jsp#/). Tall rain boots in midnight black by [Ilse Jacobsen](http://www.ilsejacobsen.com/rain-boot-long-classic-with-laces-RUB1.html?c=67478). 
+Marzena swing dress by Sachin + Babi in black and white from [Anthropologie](http://www.anthropologie.com/anthro/product/clothes-dresses/4130200890203.jsp#/). Tall rain boots in midnight black by [Ilse Jacobsen](http://www.ilsejacobsen.com/rain-boot-long-classic-with-laces-RUB1.html?c=67478). 
 
 Style & Photography: Jason Hargrove +  
 Model: Stella from Elite Toronto  
