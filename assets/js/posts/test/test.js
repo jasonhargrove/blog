@@ -1,9 +1,1 @@
-
-// testing build changes
-// es2015 should build to es5
-
-let works = true;
-
-if (works) {
-  console.log('it works!');
-}
+!function(r){function o(e){if(t[e])return t[e].exports;var n=t[e]={exports:{},id:e,loaded:!1};return r[e].call(n.exports,n,n.exports,o),n.loaded=!0,n.exports}var t={};return o.m=r,o.c=t,o.p="",o(0)}([function(r,o){"use strict";var t=!0;t&&console.log("it works!")}]);
