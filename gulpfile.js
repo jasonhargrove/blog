@@ -269,7 +269,7 @@ gulp.task('html:build', ['jekyll build'], function () {
 gulp.task('deploy:assets', ['kraken'], function () {
   return gulp.src('./_site/assets/**/*')
     .pipe(deploy({
-      remoteUrl: 'https://github.com/shootsofficial/shootsofficial.assets',
+      remoteUrl: 'git@github.com:goMainstream/blog.assets.git',
       branch: 'gh-pages'
     }));
 });
@@ -281,8 +281,8 @@ gulp.task('deploy:assets', ['kraken'], function () {
 gulp.task('deploy:production', ['build'], function () {
   return gulp.src('./_site/**/*')
     .pipe(deploy({
-      remoteUrl: 'https://github.com/shootsofficial/shootsofficial.github.io',
-      branch: 'master'
+      remoteUrl: 'git@github.com:goMainstream/blog.git',
+      branch: 'gh-pages'
     }));
 });
 
