@@ -20,7 +20,7 @@
   <meta name="twitter:site" content="{{ site.twitter_username }}" />
   <meta name="twitter:creator" content="{% if page.authorTwitter %}{{ page.authorTwitter | escape }}{% else %}{{ site.twitter_username }}{% endif %}" />
 
-  <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl | prepend: site.url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 

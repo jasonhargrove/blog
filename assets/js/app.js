@@ -17,7 +17,7 @@ function App () {
  */
 
 function start () {
-  console.log('🌳 Shoots Official');
+  console.log('🌳 Go Mainstream');
   return this;
 };
 

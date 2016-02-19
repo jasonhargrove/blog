@@ -237,7 +237,7 @@ gulp.task('javascript:posts:build', ['jekyll build', 'lint'], function () {
 gulp.task('html', function () {
   return gulp.src('_site/index.html')
     .pipe(htmlreplace({
-      javascript: '/assets/js/bundle.js?b=' + new Date().getTime()
+      javascript: '/blog/assets/js/bundle.js?b=' + new Date().getTime()
     }))
     .pipe(gulp.dest('_site'));
 });
@@ -245,7 +245,7 @@ gulp.task('html', function () {
 gulp.task('html:build', ['jekyll build'], function () {
   return gulp.src('_site/**/*.html')
     .pipe(htmlreplace({
-      javascript: '/assets/js/bundle.min.js?b=' + new Date().getTime()
+      javascript: '/blog/assets/js/bundle.min.js?b=' + new Date().getTime()
     }))
     .pipe(htmlmin(htmlminConfig))
     .pipe(uglifyInline())
