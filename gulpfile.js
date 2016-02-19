@@ -97,8 +97,12 @@ gulp.task('serve', ['jekyll build', 'sass:build', 'javascript:build'], function 
     'assets/js/**/*.js',
     'assets/js/**/*.jsx',
     'assets/js/**/*.scss',
-    'gulpfile.js'
+    '!assets/js/posts/**/*'
   ], ['javascript']);
+
+  gulp.watch([
+    'assets/js/posts/**/*.js'
+  ], ['javascript:posts']);
 
   gulp.watch([
     '_sass/**/*.scss',
@@ -178,17 +182,55 @@ gulp.task('javascript', ['lint', 'html'], function () {
     .pipe(browserSync.reload({ stream: true }));
 });
 
-gulp.task('javascript:build', ['jekyll build', 'lint'], function () {
-  return gulp.src('_site/assets/js/app.js')
+gulp.task('javascript:posts', function () {
+  var path;
+  return gulp.src('./assets/js/posts/**/*.js')
+    .pipe(rename(function (_path) {
+      path = _path;
+      return _path;
+    }))
     .pipe(webpack(webpackConfig))
     .on('error', errorGraceful)
-    .pipe(rename('bundle.js'))
-    .pipe(gulp.dest('_site/assets/js'))
-    .pipe(eslint())
-    .pipe(uglify())
-    .pipe(rename('bundle.min.js'))
-    .pipe(gulp.dest('_site/assets/js'))
+    .pipe(rename(function (_path) {
+      _path.dirname = path.dirname;
+      _path.basename = path.basename;
+      return _path;
+    }))
+    .pipe(gulp.dest('_site/assets/js/posts'))
     .pipe(browserSync.reload({ stream: true }));
+});
+
+gulp.task('javascript:build', ['jekyll build', 'lint', 'javascript:posts:build'], function () {
+  return gulp.src('_site/assets/js/app.js')
+  .pipe(webpack(webpackConfig))
+  .on('error', errorGraceful)
+  .pipe(rename('bundle.js'))
+  .pipe(gulp.dest('_site/assets/js'))
+  .pipe(eslint())
+  .pipe(uglify())
+  .pipe(rename('bundle.min.js'))
+  .pipe(gulp.dest('_site/assets/js'))
+  .pipe(browserSync.reload({ stream: true }));
+});
+
+gulp.task('javascript:posts:build', ['jekyll build', 'lint'], function () {
+  var path;
+  return gulp.src('_site/assets/js/posts/**/*.js')
+  .pipe(rename(function (_path) {
+    path = _path;
+    return _path;
+  }))
+  .pipe(webpack(webpackConfig))
+  .on('error', errorGraceful)
+  .pipe(rename(function (_path) {
+    _path.dirname = path.dirname;
+    _path.basename = path.basename;
+    return _path;
+  }))
+  .pipe(eslint())
+  .pipe(uglify())
+  .pipe(gulp.dest('_site/assets/js/posts'))
+  .pipe(browserSync.reload({ stream: true }));
 });
 
 // HTML
