@@ -10,8 +10,8 @@ title: Mainstream
 email: go@mainstre.am
 description: > # this means to ignore newlines until "baseurl:"
   Work with images and share them with the world on Mainstream.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://mainstre.am/blog" # the base hostname & protocol for your site
+baseurl: "/blog" # the subpath of your site, e.g. /blog
+url: "http://mainstre.am" # the base hostname & protocol for your site
 twitter_username: goMainstream
 github_username:  goMainstream
 shareImage: "http://shootsofficial.com/shootsofficial.assets/images/shoots-jasonhargrove-stella-portrait-rake.jpeg"
