@@ -5,7 +5,7 @@ date: 2016-02-20 11:17:35 -0500
 categories: goMainstream software publishing fashion film
 author: "mainstream"
 authorTwitter: "@goMainstream"
-shareImage: 'assets/images/jasonhargrove-tiff-2012-paperboy-zacefron-.jpg'
+shareImage: 'http://mainstre.am/blog/assets/images/jasonhargrove-tiff-2012-paperboy-zacefron-.jpg'
 ---
 
 ![TIFF Red Carpet Zac Efron]({{ page.shareImage }})
