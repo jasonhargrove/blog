@@ -21,6 +21,7 @@ var uglify = require('gulp-uglify');
 var uglifyInline = require('gulp-uglify-inline');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
+var symlink = require('gulp-sym');
 var webpack = require('webpack-stream');
 
 // Config
@@ -82,7 +83,12 @@ gulp.task('lint:build', ['jekyll build'], function () {
 gulp.task('serve', ['jekyll build', 'sass:build', 'javascript:build'], function () {
   browserSync.init({
     server: './_site',
-    port: '7777'
+    port: '7777',
+    ui: {
+      weinre: {
+        port: 8080
+      }
+    }
   });
 
   gulp.watch([
@@ -125,6 +131,14 @@ gulp.task('serve:production', ['build'], function () {
 gulp.task('jekyll build', ['clean'], shell.task([
   'jekyll build'
 ]));
+
+// GitHub project pages deploy at a sub-path of root
+// http://mainstre.am/blog
+
+gulp.task('subpath-sym', ['jekyll build'], function () {
+  return gulp.src('./_site')
+    .pipe(symlink('./_site/blog'));
+});
 
 // HTML
 gulp.task('htmlmin', ['jekyll build'], function () {
@@ -287,7 +301,7 @@ gulp.task('deploy:production', ['build'], function () {
 });
 
 // Build jekyll site
-gulp.task('build', ['jekyll build', 'sass:build', 'javascript:build', 'cssnano', 'html:build'],
+gulp.task('build', ['jekyll build', 'sass:build', 'javascript:build', 'cssnano', 'html:build', 'subpath-sym'],
 function () {
   browserSync.reload();
 });
