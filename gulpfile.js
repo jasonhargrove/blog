@@ -21,6 +21,7 @@ var uglify = require('gulp-uglify');
 var uglifyInline = require('gulp-uglify-inline');
 var rename = require('gulp-rename');
 var sass = require('gulp-sass');
+var symlink = require('gulp-sym');
 var webpack = require('webpack-stream');
 
 // Config
@@ -79,10 +80,15 @@ gulp.task('lint:build', ['jekyll build'], function () {
 
 // Serve _site directory
 // // Watch for changes
-gulp.task('serve', ['jekyll build', 'sass:build', 'javascript:build'], function () {
+gulp.task('serve', ['jekyll build', 'sass:build', 'javascript:build', 'subpath-sym'], function () {
   browserSync.init({
     server: './_site',
-    port: '7777'
+    port: '7777',
+    ui: {
+      weinre: {
+        port: 8080
+      }
+    }
   });
 
   gulp.watch([
@@ -125,6 +131,14 @@ gulp.task('serve:production', ['build'], function () {
 gulp.task('jekyll build', ['clean'], shell.task([
   'jekyll build'
 ]));
+
+// GitHub project pages deploy at a sub-path of root
+// http://mainstre.am/blog
+
+gulp.task('subpath-sym', ['jekyll build'], function () {
+  return gulp.src('./_site')
+    .pipe(symlink('./_site/blog'));
+});
 
 // HTML
 gulp.task('htmlmin', ['jekyll build'], function () {
@@ -252,6 +266,18 @@ gulp.task('html:build', ['jekyll build'], function () {
     .pipe(gulp.dest('_site'));
 });
 
+// Build jekyll site
+gulp.task('build', ['jekyll build', 'sass:build', 'javascript:build', 'cssnano', 'html:build', 'subpath-sym'],
+function () {
+  browserSync.reload();
+});
+
+// Build production site
+gulp.task('build:production', ['jekyll build', 'sass:build', 'javascript:build', 'cssnano', 'html:build'],
+function () {
+  browserSync.reload();
+});
+
 // Deploy _site/assets/ to production assets server
 // This will deploy to a project site
 // branched off our main site.
@@ -278,18 +304,12 @@ gulp.task('deploy:assets', ['kraken'], function () {
 // The master branch of the shootsofficial.github.io repo
 // (the organization's main GitHub Page)
 // http://shootsofficial.com
-gulp.task('deploy:production', ['build'], function () {
+gulp.task('deploy:production', ['build:production'], function () {
   return gulp.src('./_site/**/*')
     .pipe(deploy({
       remoteUrl: 'git@github.com:goMainstream/blog.git',
       branch: 'gh-pages'
     }));
-});
-
-// Build jekyll site
-gulp.task('build', ['jekyll build', 'sass:build', 'javascript:build', 'cssnano', 'html:build'],
-function () {
-  browserSync.reload();
 });
 
 // Shortcut
