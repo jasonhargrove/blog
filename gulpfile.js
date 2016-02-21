@@ -80,7 +80,7 @@ gulp.task('lint:build', ['jekyll build'], function () {
 
 // Serve _site directory
 // // Watch for changes
-gulp.task('serve', ['jekyll build', 'sass:build', 'javascript:build'], function () {
+gulp.task('serve', ['jekyll build', 'sass:build', 'javascript:build', 'subpath-sym'], function () {
   browserSync.init({
     server: './_site',
     port: '7777',

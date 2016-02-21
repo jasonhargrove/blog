@@ -14,7 +14,7 @@ Been a while, 🤔. Hi! 😀
 
 Jason took a detour from Mainstream to work on a tech fashion product, launched worldwide, for a well known brand. Success! He's back now 🤗
 
-My name is Alanna Joanne. With Jason I founded a photography studio called Shoots (@shootsofficial). FUN! Turns out, we work well together.
+My name is Alanna Joanne. With Jason I founded a photography studio called Shoots ([@shootsofficial](https://twitter.com/shootsofficial)). FUN! Turns out, we work well together.
 
 Mainstream is a software service for the publishing industry, conceived at fashion weeks and film festivals.
 
