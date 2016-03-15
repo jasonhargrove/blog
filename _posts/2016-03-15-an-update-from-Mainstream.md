@@ -30,6 +30,6 @@ And other things going on that are big, and intense, and worthy of much internal
 
 Anyway! Hard at work. Hard at work. Catch up soon ❤️
 
-Find us on Twitter: [https://twitter.com/goMainstream/timelines/709748835912908800](https://twitter.com/goMainstream/timelines/709748835912908800)
+Read the original posts, published to Twitter: [https://twitter.com/goMainstream/timelines/709748835912908800](https://twitter.com/goMainstream/timelines/709748835912908800)
 
 
