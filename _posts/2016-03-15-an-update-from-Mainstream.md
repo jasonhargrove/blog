@@ -28,7 +28,7 @@ Plus, it’s [Toronto Fashion Week](http://toronto-fashionweek.com), and Alanna'
 
 And other things going on that are big, and intense, and worthy of much internal angst. All positive though. All growth. All team.
 
-Anyway! Hard at work. Hard at work. Catch up soon ❤️
+<span>Anyway! Hard at work. Hard at work. Catch up soon &#10084;</span>
 
 Read the original posts, published to Twitter: [https://twitter.com/goMainstream/timelines/709748835912908800](https://twitter.com/goMainstream/timelines/709748835912908800)
 
