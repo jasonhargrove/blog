@@ -38,5 +38,5 @@ Sincerely,
 [Alanna](https://twitter.com/alannajoanne11) and [Jason](https://twitter.com/jasonhargrove)   
 [#goMainstream](https://twitter.com/search?q=%23goMainstream&src=typd)
 
-Read the original posts, published to Twitter: [https://twitter.com/goMainstream/timelines/451743371489312768](https://twitter.com/goMainstream/timelines/451743371489312768)
+Read the original posts, published to Twitter: [Twitter Collection](https://twitter.com/goMainstream/timelines/451743371489312768)
 

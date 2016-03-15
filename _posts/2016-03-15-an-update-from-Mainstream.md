@@ -30,6 +30,6 @@ And other things going on that are big, and intense, and worthy of much internal
 
 <span>Anyway! Hard at work. Hard at work. Catch up soon &#10084;</span>
 
-Read the original posts, published to Twitter: [https://twitter.com/goMainstream/timelines/709748835912908800](https://twitter.com/goMainstream/timelines/709748835912908800)
+Read the original posts, published to Twitter: [Twitter Collection](https://twitter.com/goMainstream/timelines/709748835912908800)
 
 
