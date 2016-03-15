@@ -37,3 +37,6 @@ We'll do our best to stay active. And to make it fun. Whether we succeed or fail
 Sincerely,  
 [Alanna](https://twitter.com/alannajoanne11) and [Jason](https://twitter.com/jasonhargrove)   
 [#goMainstream](https://twitter.com/search?q=%23goMainstream&src=typd)
+
+Find us on Twitter: [https://twitter.com/goMainstream/timelines/451743371489312768](https://twitter.com/goMainstream/timelines/451743371489312768)
+
