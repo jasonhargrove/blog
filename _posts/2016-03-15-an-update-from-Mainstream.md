@@ -20,9 +20,9 @@ Jason’s been playing [Kanye West](https://twitter.com/kanyewest), pretty much 
 
 He’s building the front of our MVP (minimum viable product) in Facebook’s [React](http://facebook.github.io/react/), moving away from his longtime love [Angular](https://angularjs.org).
 
-🎹 This pretty much sums up where our heads are at this week:
+<span>🎹&nbsp;&nbsp;This pretty much sums up where our heads are at this week:</span>
 
->const rightElements = [length + ' image' + ((length > 1) ? 's' : '') + ' selected', &#60;button&#62;Use&#60;/button&#62;];
+> const rightElements = [length + ' image' + ((length > 1) ? 's' : '') + ' selected', &#60;button&#62;Use&#60;/button&#62;];
 
 Plus, it’s [Toronto Fashion Week](http://toronto-fashionweek.com), and Alanna's pushing out George Pimentel’s photos to the world. (Alongside a few other Weeks.)
 
