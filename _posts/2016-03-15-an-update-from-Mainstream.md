@@ -22,7 +22,7 @@ He’s building the front of our MVP (minimum viable product) in Facebook’s [R
 
 🎹 This pretty much sums up where our heads are at this week:
 
-const rightElements = [length + ' image' + ((length > 1) ? 's' : '') + ' selected', <button>Use</button>];
+>const rightElements = [length + ' image' + ((length > 1) ? 's' : '') + ' selected', &#60;button&#62;Use&#60;/button&#62;];
 
 Plus, it’s [Toronto Fashion Week](http://toronto-fashionweek.com), and Alanna's pushing out George Pimentel’s photos to the world. (Alongside a few other Weeks.)
 
